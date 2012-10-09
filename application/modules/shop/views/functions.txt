@@ -1,0 +1,19 @@
+public function menuhover($mydata)
+	{
+		$this->data['title'] = "Menu";
+		$this->data['menu'] = array(
+			'0'=> array('icon'=>'icon-user','name'=>'Fashions','content' => array('0'=>'Mens','1'=>'Women','2'=>'Sport','3'=>'Tailor & Fabric')),
+			'1'=> array('icon'=>'icon-eye-open','name'=>'Watches & Jewellry','content' => array('0'=>'Watches','1'=>'Jewellry')),
+			'2'=> array('icon'=>'icon-leaf','name'=>'Health & Beauty','content' => array()),
+			'3'=> array('icon'=>'icon-wrench','name'=>'Homedecor & Houseware','content' => array()),
+			'4'=> array('icon'=>'icon-glass','name'=>'Food & Beverages','content' => array()),
+			'5'=> array('icon'=>'icon-book','name'=>'Books, Flowers, Gift Cards &amp; Wrapping','content' => array()),	
+			'6'=> array('icon'=>'icon-headphones','name'=>'Music, Audio Visual, Handphones, PDAs &amp; Electronics','content' => array()),
+			'7'=> array('icon'=>'icon-volume-up','name'=>'Entertainment','content' => array()),
+			'8'=> array('icon'=>'icon-gift','name'=>'Department Stores &amp; Supermarkets','content' => array('0'=>'Metro Dept. Store','1'=>'Sogo Dept. Store'))
+		);
+		foreach($mydata as $key => $value){
+			$this->data[$key] = $value;
+		}
+		$this->load->view('test_menu',$this->data);
+	} 

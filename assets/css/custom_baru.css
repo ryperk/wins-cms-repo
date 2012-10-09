@@ -1,0 +1,288 @@
+body {
+  background: #000;
+  background:url('../images_baru/body_bg.png') repeat center;
+}
+body,html,#wrapper { min-height:100%; height:100%; }
+
+ /* SIDEBAR */
+#left-colm {
+  height: 100%; min-height: 100%
+}
+#sidebar-top-header {
+  background:url('../images_baru/menu-bg-repeat.png') repeat-y center;
+  height: 227px;
+}
+#logo {
+  background:url('../images_baru/wins-mall-logo.png') no-repeat;
+  height: 152px;  width: 153px;
+  margin: 0 auto;
+  position: relative;
+  top: 35px;
+  display: block;
+  text-indent: -3000px;
+  cursor: pointer;
+}
+#sidebar-menu-list {
+  background:url('../images_baru/menu-bg-repeat.png') repeat-y center;
+  padding: 0;
+}
+.menu-list {
+  margin: 10px 0; 
+}
+
+.menu-list li a {
+  display: block;
+   padding: 0px 20px; 
+  border-bottom: 1px solid #101010;
+}
+.menu-list li a i {
+  margin:4px 10px 5px 0;
+  display: inline-block;
+  vertical-align: top
+}
+.menu-list li a span { 
+  width: 150px;  
+  display: inline-block;
+}
+
+.menu-list-embed {
+  padding-left: 15px;
+}
+.menu-list-embed li a  {
+  color: #757575;
+  padding: 0 5px
+}
+
+.menu-deal a{
+  background: url('../images_baru/menu-deals.png') no-repeat center;
+  height: 52px;
+}
+.menu-directory a {
+  background: url('../images_baru/menu-product.png') no-repeat center;
+  height: 52px;
+}
+.menu-travel a {
+  background: url('../images_baru/menu-travel.png') no-repeat center;
+  height: 52px;
+}
+.menu-help a {
+  background: url('../images_baru/menu-help.png') no-repeat center;
+  height: 52px;
+}
+#sidebar-bottom-footer {
+  position: relative;
+  bottom: 0;
+  background:url('../images_baru/menu_bottom.png') no-repeat;
+  height: 90px;
+}
+
+.accordion {
+  margin-bottom: 0px;
+}
+
+.accordion-inner {
+  border-top: 0;
+}
+.accordion-group {
+  margin-bottom: 0px;
+  border: 0px solid #E5E5E5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.accordion-heading .accordion-toggle {
+  display: block;
+  padding: 0  ;
+}
+
+/* Main Directory Menu Nav  */
+#submenu-list { float:none; margin: 0; padding: 0; }
+#submenu-list li a, #submenu-list li { float: none }
+#submenu-list li { list-style: none; position:relative }
+/*submenu*/
+#submenu-list li ul{ display: none; position: absolute; left: 100%; top:0; margin:0; padding:0; z-index: 10000  }
+#submenu-list li ul li { padding: 0 10px; border:none; }
+#submenu-list li:hover > ul{ display: block; background-color: #000;; /*memunculkan submenu ketika a pada menu level 1 di hovers*/}
+#submenu-list li ul li, #submenu-list li ul li a{ float: none;  color:#fff }
+#submenu-list li ul li{ _display:inline;/* dukungan untuk ie6 */}
+#submenu-list li ul li a{ width: 150px; display: block; }
+
+/* Main Content */
+#content-top-header {
+  background: url('../images_baru/main_column_headerbg.png');
+  height: 74px;
+}
+
+#content-top-header #access { 
+  background: url('../images_baru/access_bg.png') no-repeat;
+  margin-top: 13px;
+  height: 43px;
+  font: 12px arial
+}
+
+#content-top-header #access ul {
+  list-style-type: none;
+  margin:0;
+  padding: 12px 8px;
+  text-align: center;
+}
+#content-top-header #access ul li {
+  display: inline-block;
+  padding:0 4px;
+}
+#content-top-header #blockview {
+  position: relative;
+  top: 23px;
+  right: 5px;
+}  
+#content-top-header #blockview a.view_block {
+  float: left;
+  background: url('../images_baru/view_block.png') no-repeat;
+  height: 22px; width: 22px;
+  margin-right:5px; 
+}
+#content-top-header #blockview a.view_list {
+  float: left;
+  background: url('../images_baru/view_list.png') no-repeat;
+  height: 22px; width: 24px;
+}
+#content-header-section {
+  background: url('../images_baru/main_column_header_section.png') no-repeat left;
+  height: 62px;
+}
+#content-header-icon {
+  
+}
+#deal-feeds {
+  display: inline-block;
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-size: 11px;
+}
+#content {
+  background: url('../images_baru/content-bg.png') repeat-y;
+  padding-bottom: 50px;
+}
+#content-body {
+  /*background: url('../images_baru/content-bg.png') repeat-y;*/
+}
+#myCarousel {
+  /*margin:10px;
+  height: 300px;*/
+  width: 680px;
+  background: #101010;
+  display: inline-block;
+}
+#slideshow {
+  margin:10px 10px 0px 10px;
+}
+
+#sliders {
+  margin: 10px 10px 10px 10px;
+  height: 300px;
+  display: block;
+}
+.carousel-control.right {
+  right:0;
+}
+.carousel {
+  position: relative;
+  margin-bottom:0px;
+  line-height: 1;
+}
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+  background: #222;
+  border: 0px solid white;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+#deals {
+  margin:0 10px;
+  width: 680px;
+}
+#list-items {
+  float: left;
+  width: 670px;
+  margin: 10px 0;
+  background: #fff;
+  padding: 5px;
+  color:#777;
+}
+
+.items-img {
+  float: left;
+}
+.items-desc {
+  float:right;
+  width: 210px;
+  padding-right: 5px;
+}
+.items-addon {
+  font-size: 11px;
+  font-family: arial;
+  color:#545454;
+  margin: 5px 0;
+  float: left;
+  padding: 5px 0;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+}
+.items-price {
+  margin: 5px 0;
+  padding: 5px 0;
+
+}
+.items-price strong {
+  font-size: 20px;
+  color:orange;
+}
+
+.items-title {
+  font-size: 16px;
+  padding: 5px 0;
+}
+.items-detail {
+  display: block;
+  margin: 10px 0;
+  font-size: 13px;
+  line-height: 18px;
+}
+.view_button {
+  padding: 5px 0;
+  text-align: center;
+}
+.view_button a {
+  font-size: 16px;
+}
+
+.split-left .ico { margin: 0 5px; }
+.split-right span { margin: 0 5px; }
+
+.split-left {
+  float: left;
+  width: 105px;
+}
+.split-right {
+  float: right;
+  width: 105px; 
+}
+.separator { 
+  background: url('../images_baru/separator.png') top no-repeat; 
+  height: 2px;
+  clear: both;
+}
+.clear { clear: both; }

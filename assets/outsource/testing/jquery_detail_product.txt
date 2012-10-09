@@ -1,0 +1,7 @@
+<script>
+$(document).on("click", ".open-AddBookDialog", function () {
+   var myID = $(this).data('id');
+	 alert(myID);	
+   //$('#addBookDialog').modal('show');
+});
+</script>

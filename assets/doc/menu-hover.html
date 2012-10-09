@@ -1,0 +1,128 @@
+<html>
+
+<head>
+<style>
+.mndiv {
+	width:255px;
+	border:1px solid #099;
+	background:#0dd;
+}
+.mnhover>div>span {
+	display:inline-block;
+	width:245px;
+	background:#0ff;
+	padding:0 0 1px 5px;
+	border-bottom:1px solid #0bb;
+}
+.mnhover>div:last-child>span {
+	border-bottom:0;
+}
+.mnhover>div>div {
+	visibility:hidden;
+	position:absolute;
+	display:inline-block;
+	width:150px;
+	padding:0 5px 1px;
+	border:1px solid #000;
+	background:#0f0;
+}
+.mnhover>div>div>div {
+	border-bottom:1px solid #0b0;
+}
+.mnhover>div>div>div:last-child {
+	border-bottom:0;
+}
+.mnhover>div.show>span {
+	background:#9ff;
+}
+.mnhover>div.show>div {
+	visibility:visible;
+}
+.mnhover>div.show>div.btmhold {
+	bottom:0px;
+}
+</style>
+<script>
+function hovering(el) {
+	with(el) {
+		className='show';
+		if(document.body.clientHeight<(children[1].offsetHeight+children[1].offsetTop)) children[1].className='btmhold';
+	}
+}
+</script>
+</head>
+
+<body>
+<div class="mndiv">
+<div class="mnhover">
+	<div onmouseover="hovering(this)" onmouseout="className=''; children[1].className='';">
+		<span>Menu 1</span>
+		<div onmouseout="parentNode.className=''; className='';">
+		<div>Submenu 1 - 1</div>
+		<div>Submenu 1 - 2</div>
+		<div>Submenu 1 - 3</div>
+		<div>Submenu 1 - 4</div>
+		<div>Submenu 1 - 5</div>
+		<div>Submenu 1 - 6</div>
+		</div>
+	</div>
+	<div onmouseover="hovering(this)" onmouseout="className=''; children[1].className='';">
+		<span>Menu 2</span>
+		<div onmouseout="parentNode.className=''; className='';">
+		<div>Submenu 2 - 1</div>
+		<div>Submenu 2 - 2</div>
+		<div>Submenu 2 - 3</div>
+		<div>Submenu 2 - 4</div>
+		<div>Submenu 2 - 5</div>
+		<div>Submenu 2 - 6</div>
+		</div>
+	</div>
+	<div onmouseover="" onmouseout="className=''; children[1].className='';">
+		<span>Menu 3</span>
+		<div onmouseout="parentNode.className=''; className='';">
+		<div>Submenu 3 - 1</div>
+		<div>Submenu 3 - 2</div>
+		<div>Submenu 3 - 3</div>
+		<div>Submenu 3 - 4</div>
+		<div>Submenu 3 - 5</div>
+		<div>Submenu 3 - 6</div>
+		</div>
+	</div>
+	<div onmouseover="" onmouseout="className=''; children[1].className='';">
+		<span>Menu 4</span>
+		<div onmouseout="parentNode.className=''; className='';">
+		<div>Submenu 4 - 1</div>
+		<div>Submenu 4 - 2</div>
+		<div>Submenu 4 - 3</div>
+		<div>Submenu 4 - 4</div>
+		<div>Submenu 4 - 5</div>
+		<div>Submenu 4 - 6</div>
+		</div>
+	</div>
+	<div onmouseover="" onmouseout="className=''; children[1].className='';">
+		<span>Menu 5</span>
+		<div onmouseout="parentNode.className=''; className='';">
+		<div>Submenu 5 - 1</div>
+		<div>Submenu 5 - 2</div>
+		<div>Submenu 5 - 3</div>
+		<div>Submenu 5 - 4</div>
+		<div>Submenu 5 - 5</div>
+		<div>Submenu 5 - 6</div>
+		</div>
+	</div>
+	<div onmouseover="className='show'; if(document.body.clientHeight<(children[1].offsetHeight+children[1].offsetTop)) children[1].className='btmhold';" onmouseout="className=''; children[1].className='';">
+		<span>Menu 6</span>
+		<div onmouseout="parentNode.className=''; className='';">
+		<div>Submenu 6 - 1</div>
+		<div>Submenu 6 - 2</div>
+		<div>Submenu 6 - 3</div>
+		<div>Submenu 6 - 4</div>
+		<div>Submenu 6 - 5</div>
+		<div>Submenu 6 - 6</div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+
+</html>
