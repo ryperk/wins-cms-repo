@@ -67,7 +67,7 @@ CREATE TABLE `ci_sessions` (
 
 LOCK TABLES `ci_sessions` WRITE;
 /*!40000 ALTER TABLE `ci_sessions` DISABLE KEYS */;
-INSERT INTO `ci_sessions` VALUES ('ac2d91b0b4c14f1845d897ec17ab775b','127.0.0.1','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.92 Safari/537.4',1349848167,'a:4:{s:9:\"user_data\";s:0:\"\";s:6:\"userID\";s:20:\"505e8ee1be8a74eb59a7\";s:8:\"fullname\";s:12:\"Ryan Permana\";s:12:\"is_logged_in\";b:1;}'),('4106d7e91e17432c294deafbbabe3ff1','127.0.0.1','Mozilla/5.0 (Windows NT 5.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',1349850149,'a:4:{s:9:\"user_data\";s:0:\"\";s:6:\"userID\";s:20:\"505e8ee1be8a74eb59a7\";s:8:\"fullname\";s:12:\"Ryan Permana\";s:12:\"is_logged_in\";b:1;}');
+INSERT INTO `ci_sessions` VALUES ('ac2d91b0b4c14f1845d897ec17ab775b','127.0.0.1','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.92 Safari/537.4',1349848167,'a:4:{s:9:\"user_data\";s:0:\"\";s:6:\"userID\";s:20:\"505e8ee1be8a74eb59a7\";s:8:\"fullname\";s:12:\"Ryan Permana\";s:12:\"is_logged_in\";b:1;}'),('d7f7914db1a92c19ff003e3fe209b803','127.0.0.1','Mozilla/5.0 (Windows NT 5.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',1349853756,'a:4:{s:9:\"user_data\";s:0:\"\";s:6:\"userID\";s:20:\"505e8ee1be8a74eb59a7\";s:8:\"fullname\";s:12:\"Ryan Permana\";s:12:\"is_logged_in\";b:1;}');
 /*!40000 ALTER TABLE `ci_sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -550,7 +550,7 @@ DROP TABLE IF EXISTS `usr_previlege`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usr_previlege` (
   `usrID` char(20) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
-  `type` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `type` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '0=guset, 1=member, 3=data entry, 7=operator, 15=auditor, 31=supervisor, 63=manager, 127=administrator, 255=super admin',
   `fullname` tinyint(1) unsigned NOT NULL,
   `birthday` tinyint(1) unsigned NOT NULL,
   `email` tinyint(1) unsigned NOT NULL,
@@ -739,4 +739,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-10-10  6:55:32
+-- Dump completed on 2012-10-10  7:36:49
