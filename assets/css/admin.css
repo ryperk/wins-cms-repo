@@ -1,5 +1,12 @@
+body {
+	background-color: #f6f6f6;
+	font-family: arial;
+	font-size: 12px;
+	margin:0;
+	padding:0;
+}
 #header{
-	min-height: 100px;
+	margin-bottom: 10px;
 }
 #header h3 {
 	color: #545454;
@@ -14,11 +21,18 @@
 	display: inline-block;
 	margin-right: 30px;
 }
+#content {
+	padding: 20px 0px;
+}
+/* FORM */
+label { display: block; padding: 5px 0; }
+input[type='text'],input[type='textarea'],input[type='submit'] { display:block; }
+
 /* Main Directory Menu Nav  */
-#nav{display:block;width:100%;height:24px;margin: 0; padding: 0;}
+#nav{ margin: 0; padding: 0; background-color: #ccc; padding: 3px; }
 #nav li a, #nav li{display:inline-block;text-align: center; font-size: 12px; border-top: 1px solid #c0c0c0; border-bottom: 1px solid #c0c0c0;}
 #nav li{list-style: none;position: relative}
-#nav li a{width:120px;height:24px;text-decoration: none;background: #c0c0c0; color: white;line-height: 26px;}
+#nav li a{width:120px;height:24px;text-decoration: none;background: #005580; color: white;line-height: 26px;}
 #nav li a:hover{background: #999; border-top: 1px solid #888; border-bottom: 1px solid #ccc;text-shadow:1px 1px 1px rgba(0,0,0, .65);}
 /*submenu*/
 #nav li ul{display: none;position: absolute;left: 0;top:24;padding:0;margin:0;}
