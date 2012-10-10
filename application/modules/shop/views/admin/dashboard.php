@@ -7,22 +7,21 @@
 <meta name="author" content="">
 <!-- Styles -->
 <link rel="stylesheet" type="text/css" href="<?php echo $grid_css; ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo $main_css; ?>">
+<!--<link rel="stylesheet" type="text/css" href="<?php echo $main_css; ?>">-->
 <link rel="stylesheet" type="text/css" href="<?php echo $admin_css; ?>">
 <body>
 <div id="wrapper" class="container_12">
   <div id="header" class="grid_12">
-  	<h3>Dashboard</h3>
-  	<? echo $this->session->userdata('fullname') ?>
-  	<? echo anchor('access/logout','Logout'); ?>
+  	<h1>Dashboard</h1>
+  	<span><? echo $this->session->userdata('fullname') ?></span><span><? echo anchor('access/logout','Logout'); ?></span>
   </div>	
   <div id="navi" class="grid_12">	
   <ul id="nav">	
   <? foreach($menu as $main){ ?>
-     <li><a href="#"><?php echo $main->catName;  ?></a>
+     <li><a href="#"><?php echo $main->name;  ?></a>
           <ul> 
-          	<? foreach($submenu as $sub){ if($sub->parentID == $main->catID){ ?>
-             	<li><a href="<? echo $sub->catUrl; ?>"><?php echo $sub->catName; ?></a></li>
+          	<? foreach($submenu as $sub){ if($sub->parent_id == $main->id){ ?>
+             	<li><a href="<? echo base_url('shop/'.$sub->route); ?>"><?php echo $sub->name; ?></a></li>
              	<? }} ?>
           </ul>
      </li>
@@ -30,7 +29,7 @@
   </ul>
   </div>
   <div id="content" class="grid_12">
-    <?echo $content;?>
+    <?echo $this->load->view($content);?>
   </div>
 </div>
 <!-- Javascript -->
