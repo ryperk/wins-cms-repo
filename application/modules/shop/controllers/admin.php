@@ -10,7 +10,7 @@ class Admin extends MX_Controller {
 	public function index()
 	{
 		$mydata['title'] = 'Dashboard';
-		$mydata['page'] = 'dashboard';
+		$mydata['page'] = 'admin_dashboard';
 		$this->admin_display->dashboard($mydata);
 	}
 
@@ -33,9 +33,18 @@ class Admin extends MX_Controller {
 	}
 
 	public function deal_save(){
-		$send = $this->admin_display->save();	
+		$dataPost = array (
+			'id' 			=> $this->input->post('deal_id'),
+			'title'			=> $this->input->post('deal_title'),
+			'price'			=> $this->input->post('deal_price'),
+			'discount'		=> $this->input->post('deal_discount'),
+			'expired_date'	=> $this->input->post('deal_expired_date'),
+			'description'	=> $this->input->post('deal_desc'),
+			'userID'		=> $this->input->post('deal_id')
+		);
+		$send = $this->admin_display->save_deal($dataPost);	
 		if($send){
-			echo "sukses";
+			redirect('admin/');
 		}else{
 			echo "gagal";
 		}
