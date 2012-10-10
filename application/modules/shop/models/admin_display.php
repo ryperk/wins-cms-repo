@@ -14,11 +14,9 @@ class Admin_display extends CI_Model
 		//$this->data['custom_css'] = $this->config->item('custom_css');
 		$this->data['admin_css'] = $this->config->item('admin_css');
 		//$this->data['responsive_css'] = $this->config->item('responsive_css');
-		
 		$this->data['main_js'] = $this->config->item('main_js');
 		//$this->data['bootstrap_js'] = $this->config->item('bootstrap_js');
 		//$this->data['custom_css'] = $this->config->item('custom_css');
-		
 		$this->data['description'] = "WINS Mall, provide by WINSGobal Indonesia";
 		$this->data['keywords'] = "winsglobal,wins,global,shop,store,indonesia";
 		$this->data['author'] = "Ryan Permana";
@@ -37,38 +35,27 @@ class Admin_display extends CI_Model
 		}
 	}
 
-	function getFieldTable($table){
-		$fieldsData = $this->db->field_data($table);
-		$res = array();
-		foreach ($fieldsData as $idx => $row) {
-			$res[] = $row;
-		}
-		return $res;
-		
-	}
-
 	public function dashboard($mydata)
 	{
 		// Data  
 		$this->data['menu'] 	= $this->db->query("SELECT * FROM admin_menu WHERE parent_id=0")->result();
 		$this->data['submenu']	= $this->db->query("SELECT * FROM admin_menu")->result();
 		$this->data['deals'] 	= $this->db->get('wns_deals')->result();
-		$this->data['fields'] 	= $this->getFieldTable($table='wns_deals');
-
-		$mydata['content'] = $mydata['page'];
-		$mydata['deal_menu_list'] ='';
-
+		$this->data['content']  = $mydata['page'];
 		foreach ($mydata as $key => $value) {
 			$this->data[$key] = $value;
 		}
 		$this->load->view('admin/dashboard',$this->data);
 	}
 
-	public function save()
+	public function save_deal($dataPost)
 	{
-		$dataPost = array (
-			'id' => ''
-			);
-	}
+		$put = $this->db->insert('wns_deals',$dataPost);
+		if($put){
+			return TRUE;
+		}else{
+			return FALSE;
+		}	
+	}	
 
 }	
