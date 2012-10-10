@@ -31,7 +31,7 @@ class Access extends MX_Controller {
 				'is_logged_in' => TRUE
 			);
 			$this->session->set_userdata($newSession);
-			redirect('shop/admin');
+			redirect('admin/shop');
 		}else{
 			$this->index();
 		}	
