@@ -10,6 +10,7 @@ class Admin extends MX_Controller {
 	public function index()
 	{
 		$mydata['title'] = 'Dashboard';
+		$mydata['page'] = 'index';
 		$this->admin_display->dashboard($mydata);
 	}
 
