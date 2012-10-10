@@ -2,7 +2,7 @@
 <IfModule mod_rewrite.c>
    RewriteEngine on
     Options +FollowSymLinks
-    RewriteBase /wins-cms-repo
+    RewriteBase /
     
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
