@@ -68,7 +68,7 @@ if ($handle)
 	}
 }
 
-$route['default_controller'] = "pages";
+$route['default_controller'] = "shop";
 $route['404_override'] = '';
 
 /* End of file routes.php */
