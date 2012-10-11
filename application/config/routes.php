@@ -37,6 +37,8 @@
 | in the URL cannot be matched to a valid route.
 |
 */
+$route['default_controller'] = "shop";
+$route['404_override'] = '';
 
 // admin and modules
 $handle = opendir(APPPATH.'modules');
@@ -64,12 +66,13 @@ if ($handle)
 				$route[$module] = $module;
 				$route[$module.'/(.*)'] = $module.'/$1';
 			}
+		}else{
+			$route['admin'] = $route['default_controller'].'/admin';
 		}
 	}
 }
 
-$route['default_controller'] = "shop";
-$route['404_override'] = '';
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

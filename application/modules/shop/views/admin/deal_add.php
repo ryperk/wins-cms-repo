@@ -14,7 +14,7 @@
 <? echo form_input('deal_discount',''); ?>
 
 <? echo form_label('Deal Expired Date'); ?>
-<? echo form_input('deal_experid_date',''); ?>
+<? echo form_input('deal_expired_date',''); ?>
 
 <? echo form_label('Deal Description'); ?>
 <? echo form_textarea('deal_desc','Deal Description'); ?>

@@ -44,7 +44,7 @@ class Admin extends MX_Controller {
 		);
 		$send = $this->admin_display->save_deal($dataPost);	
 		if($send){
-			redirect('admin/shop');
+			redirect('admin/shop/deal_manage');
 		}else{
 			echo "gagal";
 		}
