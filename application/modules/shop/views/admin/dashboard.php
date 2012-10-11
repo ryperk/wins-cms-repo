@@ -7,27 +7,30 @@
 <meta name="author" content="">
 <!-- Styles -->
 <link rel="stylesheet" type="text/css" href="<?php echo $grid_css; ?>">
-<!--<link rel="stylesheet" type="text/css" href="<?php echo $main_css; ?>">-->
+<link rel="stylesheet" type="text/css" href="<?php echo $main_css; ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo $admin_css; ?>">
 <body>
 <div id="wrapper" class="container_12">
   <div id="header" class="grid_12">
   	<h1>Dashboard</h1>
   	<span><? echo $this->session->userdata('fullname') ?></span><span><? echo anchor('access/logout','Logout'); ?></span>
-  </div>	
-  <div id="navi" class="grid_12">	
-  <ul id="nav">	
-  <? foreach($menu as $main){ ?>
-     <li><a href="#"><?php echo $main->name;  ?></a>
-          <ul> 
-          	<? foreach($submenu as $sub){ if($sub->parent_id == $main->id){ ?>
-             	<li><a href="<? echo base_url('shop/'.$sub->route); ?>"><?php echo $sub->name; ?></a></li>
-             	<? }} ?>
-          </ul>
-     </li>
-  <? } ?>
-  </ul>
   </div>
+
+  <div id="navi" class="grid_12">  
+    <ul id="nav">  
+      <? foreach($menu as $main){ ?>
+        <li><a href="#"><?php echo $main->name;  ?></a>
+          <ul> 
+          <? foreach($submenu as $sub){ 
+            if($sub->parent_id == $main->id){ ?>
+            <li><a href="<? echo base_url('shop/'.$sub->route); ?>"><?php echo $sub->name; ?></a></li>
+          <? }} ?>
+          </ul>
+        </li>
+      <? } ?>  
+    </ul>
+  </div>
+
   <div id="content" class="grid_12">
     <?echo $this->load->view($content);?>
   </div>

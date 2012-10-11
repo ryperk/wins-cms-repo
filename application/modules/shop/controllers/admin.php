@@ -34,7 +34,7 @@ class Admin extends MX_Controller {
 
 	public function deal_save(){
 		$dataPost = array (
-			'id' 			=> $this->input->post('deal_id'),
+			'id' 			=> '',
 			'title'			=> $this->input->post('deal_title'),
 			'price'			=> $this->input->post('deal_price'),
 			'discount'		=> $this->input->post('deal_discount'),
