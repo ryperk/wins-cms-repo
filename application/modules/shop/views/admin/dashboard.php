@@ -19,7 +19,7 @@
   <div id="navi" class="grid_12">  
     <ul id="nav">  
       <? foreach($menu as $main){ ?>
-        <li><a href="#"><?php echo $main->name;  ?></a>
+        <li><a href="<?php echo $main->route ?>"><?php echo $main->name;  ?></a>
           <ul> 
           <? foreach($submenu as $sub){ 
             if($sub->parent_id == $main->id){ ?>
