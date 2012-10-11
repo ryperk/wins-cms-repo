@@ -247,7 +247,6 @@ class Admin extends MX_Controller {
 			
 			if ($_POST)
 			{	
-				die('erroorrr');
 				// set redirect to default if not given
 				if ($redirect == '')
 				{
@@ -264,9 +263,8 @@ class Admin extends MX_Controller {
 					
 					// for use with ce
 					if ($this->session->userdata('groupID') != 0 && $this->permission->get_group_permissions($this->session->userdata('groupID')))
-					{
-	
-						$this->session->set_userdata('session_admin', TRUE);
+					{	
+						$this->session->set_userdata('session_admin', TRUE);						
 					}
 					
 					// update quota
