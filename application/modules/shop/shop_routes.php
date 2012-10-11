@@ -1,2 +1,2 @@
 <?php
-$route['admin'] = 'shop/admin/index';
+//$route['admin'] = 'shop/admin/index';
